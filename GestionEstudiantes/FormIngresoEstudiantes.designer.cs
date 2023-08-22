@@ -86,7 +86,6 @@ namespace IngresoEstudiantes
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(750, 460);
             this.panel1.TabIndex = 0;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // dgvLista
             // 
@@ -232,7 +231,6 @@ namespace IngresoEstudiantes
             this.label7.Size = new System.Drawing.Size(82, 18);
             this.label7.TabIndex = 10;
             this.label7.Text = "PARCIAL 3";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label6
             // 
@@ -244,7 +242,6 @@ namespace IngresoEstudiantes
             this.label6.Size = new System.Drawing.Size(82, 18);
             this.label6.TabIndex = 9;
             this.label6.Text = "PARCIAL 2";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label5
             // 
@@ -256,7 +253,6 @@ namespace IngresoEstudiantes
             this.label5.Size = new System.Drawing.Size(82, 18);
             this.label5.TabIndex = 8;
             this.label5.Text = "PARCIAL 1";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label4
             // 
@@ -269,7 +265,6 @@ namespace IngresoEstudiantes
             this.label4.Size = new System.Drawing.Size(82, 25);
             this.label4.TabIndex = 7;
             this.label4.Text = "NOTAS";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label3
             // 

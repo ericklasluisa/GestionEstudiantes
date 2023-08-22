@@ -16,9 +16,10 @@ namespace Proyecto
             InitializeComponent();
             formatoListViewEstudiantes();
             btnCalcularPromedios.Enabled  = false;
-            btnOrdenarPorApellido.Enabled = false;
+            btnOrdenarPorApellido.Enabled = false;    
             btnOrdenarPorPromedio.Enabled = false;
         }
+
 
         public void formatoListViewEstudiantes()
         {
@@ -65,6 +66,7 @@ namespace Proyecto
                 }
 
                 btnCalcularPromedios.Enabled = true;
+                btnOrdenarPorPromedio.Enabled = true;
                 btnOrdenarPorApellido.Enabled = true;
             }
             else
@@ -93,7 +95,7 @@ namespace Proyecto
             listViewEstudiantes.Clear();
             formatoListViewEstudiantes();
             verEstudiantes();
-            btnOrdenarPorPromedio.Enabled = true;
+          
 
             MessageBox.Show("Promedios Calculados","Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }

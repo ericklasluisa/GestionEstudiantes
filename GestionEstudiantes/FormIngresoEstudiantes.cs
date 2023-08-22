@@ -13,11 +13,58 @@ using Proyecto;
 namespace IngresoEstudiantes
 {
 
-
-
-
     public partial class FormIngresoEstudiante : Form
     {
+
+        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && e.KeyChar != ' ' && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtApellido_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && e.KeyChar != ' ' && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtNombre_Validating(object sender, CancelEventArgs e)
+        {
+            TextBox textBox = (TextBox)sender;
+
+            if (string.IsNullOrWhiteSpace(textBox.Text))
+            {
+                MessageBox.Show("Por favor, ingrese un nombre.", "Campo vacio", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+            else if (textBox.Text.Length > 35)
+            {
+                MessageBox.Show("El nombre no puede superar los 50 caracteres.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                textBox.Focus();
+                e.Cancel = true;
+            }
+        }
+
+        private void txtApellido_Validating(object sender, CancelEventArgs e)
+        {
+            TextBox textBox = (TextBox)sender;
+
+            if (string.IsNullOrWhiteSpace(textBox.Text))
+            {
+                MessageBox.Show("Por favor, ingrese un apellido.", "Campo vacio", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+            else if (textBox.Text.Length > 35)
+            {
+                MessageBox.Show("El apellido no puede superar los 50 caracteres.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                textBox.Focus();
+                e.Cancel = true;
+            }
+        }
 
         public static bool EsNumeroDecimalValido(string texto)
         {
@@ -46,7 +93,7 @@ namespace IngresoEstudiantes
             TextBox textBox = (TextBox)sender;
             if (!EsNumeroDecimalValido(textBox.Text))
             {
-                MessageBox.Show("Por favor, ingresa una nota válida (entre 0 y 20 con máximo dos decimales).", "Nota Inválida", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Por favor, ingresa notas válidas (entre 0 y 20) con dos decimales separados por coma decimal.", "Nota Inválida", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 textBox.SelectAll();
                 e.Cancel = true; // Evita que el TextBox pierda el foco
             }
@@ -83,10 +130,14 @@ namespace IngresoEstudiantes
             txtNota1.Validating += txtNota_Validating;
             txtNota2.Validating += txtNota_Validating;
             txtNota3.Validating += txtNota_Validating;
+            txtApellido.Validating += txtApellido_Validating;
+            txtNombre.Validating += txtNombre_Validating;
+            txtNombre.KeyPress += txtNombre_KeyPress;
+            txtApellido.KeyPress += txtApellido_KeyPress;
             MostrarLista();
 
         }
-        
+
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             if (txtCodigo.Text == "" || txtNombre.Text == "" || txtApellido.Text == "" || txtNota1.Text == "" || txtNota2.Text == "" || txtNota3.Text == "")
@@ -144,7 +195,6 @@ namespace IngresoEstudiantes
                 {
                     string codigoEstudiante = GlobalList.lista.EncontrarPosicion(posicion).student.Code;
 
-                    // Mostrar un MessageBox personalizado
                     DialogResult result = MessageBox.Show("El estudiante " + txtNombre.Text + " " + txtApellido.Text + " ya se encuentra en la lista con el código " + codigoEstudiante + ". ¿Desea agregarlo de todas formas?",
                                                           "Estudiante Existente",
                                                           MessageBoxButtons.YesNo,
@@ -182,8 +232,6 @@ namespace IngresoEstudiantes
 
             }
 
-
-
         }
 
         private void dgvList_SelectionChanged(object sender, EventArgs e)
@@ -217,10 +265,6 @@ namespace IngresoEstudiantes
 
             }
         }
-
-
-
-
 
         private void dgvLista_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
@@ -310,35 +354,6 @@ namespace IngresoEstudiantes
             }
 
         }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtNota1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+      
     }
 }

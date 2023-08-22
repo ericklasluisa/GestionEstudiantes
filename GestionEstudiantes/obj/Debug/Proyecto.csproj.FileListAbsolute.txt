@@ -41,3 +41,18 @@ C:\Users\erick\Desktop\ESPE\TERCER SEMESTRE\Estructura de Datos\GITHUB\GestionEs
 C:\Users\erick\Desktop\ESPE\TERCER SEMESTRE\Estructura de Datos\GITHUB\GestionEstudiantes\GestionEstudiantes\obj\Debug\Proyecto.csproj.CoreCompileInputs.cache
 C:\Users\erick\Desktop\ESPE\TERCER SEMESTRE\Estructura de Datos\GITHUB\GestionEstudiantes\GestionEstudiantes\obj\Debug\Proyecto.exe
 C:\Users\erick\Desktop\ESPE\TERCER SEMESTRE\Estructura de Datos\GITHUB\GestionEstudiantes\GestionEstudiantes\obj\Debug\Proyecto.pdb
+D:\Leonardo Yaranga\Escritorio\Estructura de datos\Gestion Estudiantes\GestionEstudiantes\GestionEstudiantes\bin\Debug\Proyecto.exe.config
+D:\Leonardo Yaranga\Escritorio\Estructura de datos\Gestion Estudiantes\GestionEstudiantes\GestionEstudiantes\bin\Debug\Proyecto.exe
+D:\Leonardo Yaranga\Escritorio\Estructura de datos\Gestion Estudiantes\GestionEstudiantes\GestionEstudiantes\bin\Debug\Proyecto.pdb
+D:\Leonardo Yaranga\Escritorio\Estructura de datos\Gestion Estudiantes\GestionEstudiantes\GestionEstudiantes\obj\Debug\Proyecto.csproj.AssemblyReference.cache
+D:\Leonardo Yaranga\Escritorio\Estructura de datos\Gestion Estudiantes\GestionEstudiantes\GestionEstudiantes\obj\Debug\Proyecto.csproj.SuggestedBindingRedirects.cache
+D:\Leonardo Yaranga\Escritorio\Estructura de datos\Gestion Estudiantes\GestionEstudiantes\GestionEstudiantes\obj\Debug\RegistroEstudiantes_GUI.NET.FormBuscarEstudiante.resources
+D:\Leonardo Yaranga\Escritorio\Estructura de datos\Gestion Estudiantes\GestionEstudiantes\GestionEstudiantes\obj\Debug\IngresoEstudiantes.FormIngresoEstudiante.resources
+D:\Leonardo Yaranga\Escritorio\Estructura de datos\Gestion Estudiantes\GestionEstudiantes\GestionEstudiantes\obj\Debug\Proyecto.FormPrincipal.resources
+D:\Leonardo Yaranga\Escritorio\Estructura de datos\Gestion Estudiantes\GestionEstudiantes\GestionEstudiantes\obj\Debug\Proyecto.FormInicio.resources
+D:\Leonardo Yaranga\Escritorio\Estructura de datos\Gestion Estudiantes\GestionEstudiantes\GestionEstudiantes\obj\Debug\Proyecto.FormVerEstudiantes.resources
+D:\Leonardo Yaranga\Escritorio\Estructura de datos\Gestion Estudiantes\GestionEstudiantes\GestionEstudiantes\obj\Debug\Proyecto.Properties.Resources.resources
+D:\Leonardo Yaranga\Escritorio\Estructura de datos\Gestion Estudiantes\GestionEstudiantes\GestionEstudiantes\obj\Debug\Proyecto.csproj.GenerateResource.cache
+D:\Leonardo Yaranga\Escritorio\Estructura de datos\Gestion Estudiantes\GestionEstudiantes\GestionEstudiantes\obj\Debug\Proyecto.csproj.CoreCompileInputs.cache
+D:\Leonardo Yaranga\Escritorio\Estructura de datos\Gestion Estudiantes\GestionEstudiantes\GestionEstudiantes\obj\Debug\Proyecto.exe
+D:\Leonardo Yaranga\Escritorio\Estructura de datos\Gestion Estudiantes\GestionEstudiantes\GestionEstudiantes\obj\Debug\Proyecto.pdb
