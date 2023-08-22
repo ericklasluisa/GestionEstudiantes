@@ -89,5 +89,10 @@ namespace Proyecto
         {
             AbrirFormulario(new FormBuscarEstudiante());
         }
+
+        private void buttonInicio_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario(new FormInicio());
+        }
     }
 }

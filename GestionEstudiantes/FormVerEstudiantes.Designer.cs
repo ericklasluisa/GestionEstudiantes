@@ -69,7 +69,7 @@
             // 
             this.listViewEstudiantes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(79)))), ((int)(((byte)(99)))));
             this.listViewEstudiantes.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listViewEstudiantes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
+            this.listViewEstudiantes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.listViewEstudiantes.HideSelection = false;
             this.listViewEstudiantes.Location = new System.Drawing.Point(30, 92);
             this.listViewEstudiantes.Name = "listViewEstudiantes";

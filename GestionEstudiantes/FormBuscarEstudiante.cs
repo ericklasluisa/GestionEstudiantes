@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,6 +16,40 @@ namespace RegistroEstudiantes_GUI.NET
 
     public partial class FormBuscarEstudiante : Form
     {
+
+        public static bool EsNumeroDecimalValido(string texto)
+        {
+            // Configura la cultura regional para usar la coma como separador decimal
+            CultureInfo cultura = new CultureInfo("es-ES");
+
+            // Utiliza TryParse para verificar si el texto es un número decimal válido
+            if (double.TryParse(texto, NumberStyles.AllowDecimalPoint, cultura, out double resultado))
+            {
+                // Verifica si el valor está en el rango de notas válidas (por ejemplo, de 0 a 20)
+                if (resultado >= 0 && resultado <= 20)
+                {
+                    // Verificar que tenga máximo dos decimales
+                    string[] partes = texto.Split(',');
+                    if (partes.Length == 1 || partes[1].Length <= 2)
+                    {
+                        return true; // Es un número decimal válido en el rango de notas con máximo dos decimales
+                    }
+                }
+            }
+            return false; // No es un número decimal válido o está fuera del rango de notas o tiene más de dos decimales
+        }
+
+        private void txtNota_Validating(object sender, CancelEventArgs e)
+        {
+            TextBox textBox = (TextBox)sender;
+            if (!EsNumeroDecimalValido(textBox.Text))
+            {
+                MessageBox.Show("Por favor, ingresa una nota válida (entre 0 y 20 con máximo dos decimales).", "Nota Inválida", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                textBox.SelectAll();
+                e.Cancel = true; // Evita que el TextBox pierda el foco
+            }
+        }
+
         public FormBuscarEstudiante()
         {
             InitializeComponent();
@@ -29,6 +64,9 @@ namespace RegistroEstudiantes_GUI.NET
             btnLimpiar.Enabled = false;
             txtPosicion.Enabled = false;
             btnCalcularPromedio.Enabled = false;
+            txtNota1.Validating += txtNota_Validating;
+            txtNota2.Validating += txtNota_Validating;
+            txtNota3.Validating += txtNota_Validating;
         }
 
 
@@ -79,8 +117,6 @@ namespace RegistroEstudiantes_GUI.NET
                 txtApellido.Text = stdBuscado.student.LastName;
                 txtCodigo.Text = stdBuscado.student.Code;
 
-                txtNombre.Enabled = true;
-                txtApellido.Enabled = true;
                 txtNota1.Enabled = true;
                 txtNota2.Enabled = true;
                 txtNota3.Enabled = true;
@@ -105,11 +141,27 @@ namespace RegistroEstudiantes_GUI.NET
 
             if (posicion != -1)
             {
-                
+                string Nota1 = txtNota1.Text.Replace(",", ".");
+                string Nota2 = txtNota2.Text.Replace(",", ".");
+                string Nota3 = txtNota3.Text.Replace(",", ".");
+
+                double.TryParse(Nota1, out double nota1);
+                double.TryParse(Nota2, out double nota2);
+                double.TryParse(Nota3, out double nota3);
+
                 double[] notas = new double[4];
-                notas[0] = double.Parse(txtNota1.Text);
-                notas[1] = double.Parse(txtNota2.Text);
-                notas[2] = double.Parse(txtNota3.Text);
+                notas[0] = nota1;
+                notas[1] = nota2;
+                notas[2] = nota3;
+                notas[3] = 0.0;
+
+                if (!double.TryParse(Nota1, NumberStyles.Float, CultureInfo.InvariantCulture, out notas[0]) ||
+                    !double.TryParse(Nota2, NumberStyles.Float, CultureInfo.InvariantCulture, out notas[1]) ||
+                    !double.TryParse(Nota3, NumberStyles.Float, CultureInfo.InvariantCulture, out notas[2]))
+                {
+                    MessageBox.Show("Por favor, ingresa notas válidas (entre 0 y 20) con coma decimal.", "Notas Inválidas", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
 
                 GlobalList.lista.EncontrarPosicion(posicion).student.Notas = notas;
 
@@ -136,13 +188,30 @@ namespace RegistroEstudiantes_GUI.NET
 
         private void btnCalcularPromedio_Click(object sender, EventArgs e)
         {
-                     
-            double[] notas = new double[4];
-            notas[0] = double.Parse(txtNota1.Text);
-            notas[1] = double.Parse(txtNota2.Text);
-            notas[2] = double.Parse(txtNota3.Text);
 
-            txtPromedio.Text =( (notas[0] + notas[1] + notas[2]) / 3).ToString();
+            string Nota1 = txtNota1.Text.Replace(",", ".");
+            string Nota2 = txtNota2.Text.Replace(",", ".");
+            string Nota3 = txtNota3.Text.Replace(",", ".");
+
+            double.TryParse(Nota1, out double nota1);
+            double.TryParse(Nota2, out double nota2);
+            double.TryParse(Nota3, out double nota3);
+
+            double[] notas = new double[4];
+            notas[0] = nota1;
+            notas[1] = nota2;
+            notas[2] = nota3;
+            notas[3] = 0.0;
+
+            if (!double.TryParse(Nota1, NumberStyles.Float, CultureInfo.InvariantCulture, out notas[0]) ||
+                !double.TryParse(Nota2, NumberStyles.Float, CultureInfo.InvariantCulture, out notas[1]) ||
+                !double.TryParse(Nota3, NumberStyles.Float, CultureInfo.InvariantCulture, out notas[2]))
+            {
+                MessageBox.Show("Por favor, ingresa notas válidas (entre 0 y 20) con coma decimal.", "Notas Inválidas", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            txtPromedio.Text = Math.Round(( (notas[0] + notas[1] + notas[2]) / 3),2).ToString();
 
         }
 
@@ -154,6 +223,21 @@ namespace RegistroEstudiantes_GUI.NET
         private void btnQ_Click(object sender, EventArgs e)
         {
             MessageBox.Show(GlobalList.lista.EncontrarPosicion(0).student.LastName);
+        }
+
+        private void txtNota3_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void TextBox_Validating(object sender, CancelEventArgs e)
+        {
+
+        }
+
+        private void txtNota1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
         }
     }
 }

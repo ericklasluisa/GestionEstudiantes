@@ -39,6 +39,7 @@
             this.labelOpciones = new System.Windows.Forms.Label();
             this.panelVentanas = new System.Windows.Forms.Panel();
             this.panelBarraSuperior = new System.Windows.Forms.Panel();
+            this.buttonInicio = new System.Windows.Forms.Button();
             this.buttonCerrar = new System.Windows.Forms.Button();
             this.panelPrincipal.SuspendLayout();
             this.panelLateral.SuspendLayout();
@@ -204,12 +205,27 @@
             // panelBarraSuperior
             // 
             this.panelBarraSuperior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.panelBarraSuperior.Controls.Add(this.buttonInicio);
             this.panelBarraSuperior.Controls.Add(this.buttonCerrar);
             this.panelBarraSuperior.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelBarraSuperior.Location = new System.Drawing.Point(0, 0);
             this.panelBarraSuperior.Name = "panelBarraSuperior";
             this.panelBarraSuperior.Size = new System.Drawing.Size(1000, 40);
             this.panelBarraSuperior.TabIndex = 0;
+            // 
+            // buttonInicio
+            // 
+            this.buttonInicio.BackgroundImage = global::Proyecto.Properties.Resources.img_inicio;
+            this.buttonInicio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.buttonInicio.FlatAppearance.BorderSize = 0;
+            this.buttonInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonInicio.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonInicio.Location = new System.Drawing.Point(10, 5);
+            this.buttonInicio.Name = "buttonInicio";
+            this.buttonInicio.Size = new System.Drawing.Size(35, 30);
+            this.buttonInicio.TabIndex = 0;
+            this.buttonInicio.UseVisualStyleBackColor = true;
+            this.buttonInicio.Click += new System.EventHandler(this.buttonInicio_Click);
             // 
             // buttonCerrar
             // 
@@ -260,6 +276,7 @@
         private System.Windows.Forms.Button buttonCerrar;
         private System.Windows.Forms.Button buttonMenuOpciones;
         private System.Windows.Forms.Panel panelLateral;
+        private System.Windows.Forms.Button buttonInicio;
     }
 }
 

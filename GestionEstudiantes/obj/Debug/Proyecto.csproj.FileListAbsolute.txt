@@ -27,3 +27,17 @@ C:\Users\paqui\Desktop\ESPE\TERCER SEMESTRE\ESTRUCTURA DE DATOS\TERCER PARCIAL\P
 C:\Users\paqui\Desktop\ESPE\TERCER SEMESTRE\ESTRUCTURA DE DATOS\TERCER PARCIAL\Proyecto\obj\Debug\Proyecto.csproj.CoreCompileInputs.cache
 C:\Users\paqui\Desktop\ESPE\TERCER SEMESTRE\ESTRUCTURA DE DATOS\TERCER PARCIAL\Proyecto\obj\Debug\Proyecto.exe
 C:\Users\paqui\Desktop\ESPE\TERCER SEMESTRE\ESTRUCTURA DE DATOS\TERCER PARCIAL\Proyecto\obj\Debug\Proyecto.pdb
+C:\Users\erick\Desktop\ESPE\TERCER SEMESTRE\Estructura de Datos\GITHUB\GestionEstudiantes\GestionEstudiantes\bin\Debug\Proyecto.exe.config
+C:\Users\erick\Desktop\ESPE\TERCER SEMESTRE\Estructura de Datos\GITHUB\GestionEstudiantes\GestionEstudiantes\bin\Debug\Proyecto.exe
+C:\Users\erick\Desktop\ESPE\TERCER SEMESTRE\Estructura de Datos\GITHUB\GestionEstudiantes\GestionEstudiantes\bin\Debug\Proyecto.pdb
+C:\Users\erick\Desktop\ESPE\TERCER SEMESTRE\Estructura de Datos\GITHUB\GestionEstudiantes\GestionEstudiantes\obj\Debug\Proyecto.csproj.AssemblyReference.cache
+C:\Users\erick\Desktop\ESPE\TERCER SEMESTRE\Estructura de Datos\GITHUB\GestionEstudiantes\GestionEstudiantes\obj\Debug\RegistroEstudiantes_GUI.NET.FormBuscarEstudiante.resources
+C:\Users\erick\Desktop\ESPE\TERCER SEMESTRE\Estructura de Datos\GITHUB\GestionEstudiantes\GestionEstudiantes\obj\Debug\IngresoEstudiantes.FormIngresoEstudiante.resources
+C:\Users\erick\Desktop\ESPE\TERCER SEMESTRE\Estructura de Datos\GITHUB\GestionEstudiantes\GestionEstudiantes\obj\Debug\Proyecto.FormPrincipal.resources
+C:\Users\erick\Desktop\ESPE\TERCER SEMESTRE\Estructura de Datos\GITHUB\GestionEstudiantes\GestionEstudiantes\obj\Debug\Proyecto.FormInicio.resources
+C:\Users\erick\Desktop\ESPE\TERCER SEMESTRE\Estructura de Datos\GITHUB\GestionEstudiantes\GestionEstudiantes\obj\Debug\Proyecto.FormVerEstudiantes.resources
+C:\Users\erick\Desktop\ESPE\TERCER SEMESTRE\Estructura de Datos\GITHUB\GestionEstudiantes\GestionEstudiantes\obj\Debug\Proyecto.Properties.Resources.resources
+C:\Users\erick\Desktop\ESPE\TERCER SEMESTRE\Estructura de Datos\GITHUB\GestionEstudiantes\GestionEstudiantes\obj\Debug\Proyecto.csproj.GenerateResource.cache
+C:\Users\erick\Desktop\ESPE\TERCER SEMESTRE\Estructura de Datos\GITHUB\GestionEstudiantes\GestionEstudiantes\obj\Debug\Proyecto.csproj.CoreCompileInputs.cache
+C:\Users\erick\Desktop\ESPE\TERCER SEMESTRE\Estructura de Datos\GITHUB\GestionEstudiantes\GestionEstudiantes\obj\Debug\Proyecto.exe
+C:\Users\erick\Desktop\ESPE\TERCER SEMESTRE\Estructura de Datos\GITHUB\GestionEstudiantes\GestionEstudiantes\obj\Debug\Proyecto.pdb

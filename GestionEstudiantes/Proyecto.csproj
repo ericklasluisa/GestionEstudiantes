@@ -141,5 +141,8 @@
   <ItemGroup>
     <None Include="img\logoDefinitivo.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="img\img_inicio.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
