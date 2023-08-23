@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.panelBuscarEstudiante = new System.Windows.Forms.Panel();
-            this.btnQ = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnCalcularPromedio = new System.Windows.Forms.Button();
             this.txtPosicion = new System.Windows.Forms.TextBox();
@@ -57,7 +56,6 @@
             // panelBuscarEstudiante
             // 
             this.panelBuscarEstudiante.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.panelBuscarEstudiante.Controls.Add(this.btnQ);
             this.panelBuscarEstudiante.Controls.Add(this.btnBuscar);
             this.panelBuscarEstudiante.Controls.Add(this.btnCalcularPromedio);
             this.panelBuscarEstudiante.Controls.Add(this.txtPosicion);
@@ -85,21 +83,6 @@
             this.panelBuscarEstudiante.Size = new System.Drawing.Size(750, 460);
             this.panelBuscarEstudiante.TabIndex = 1;
             this.panelBuscarEstudiante.Paint += new System.Windows.Forms.PaintEventHandler(this.panelBuscarEstudiante_Paint);
-            // 
-            // btnQ
-            // 
-            this.btnQ.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnQ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnQ.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
-            this.btnQ.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.btnQ.Location = new System.Drawing.Point(216, 318);
-            this.btnQ.Name = "btnQ";
-            this.btnQ.Size = new System.Drawing.Size(111, 38);
-            this.btnQ.TabIndex = 41;
-            this.btnQ.Text = "?";
-            this.btnQ.UseVisualStyleBackColor = false;
-            this.btnQ.Visible = false;
-            this.btnQ.Click += new System.EventHandler(this.btnQ_Click);
             // 
             // btnBuscar
             // 
@@ -381,6 +364,5 @@
         private System.Windows.Forms.TextBox txtPosicion;
         private System.Windows.Forms.Button btnCalcularPromedio;
         private System.Windows.Forms.Button btnBuscar;
-        private System.Windows.Forms.Button btnQ;
     }
 }

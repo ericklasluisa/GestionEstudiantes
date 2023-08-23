@@ -30,14 +30,14 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panelLogo = new System.Windows.Forms.Panel();
+            this.pictureLogo = new System.Windows.Forms.PictureBox();
             this.labelHora = new System.Windows.Forms.Label();
             this.panelFechaHora = new System.Windows.Forms.Panel();
             this.labelFecha = new System.Windows.Forms.Label();
             this.timerFechaHora = new System.Windows.Forms.Timer(this.components);
-            this.pictureLogo = new System.Windows.Forms.PictureBox();
             this.panelLogo.SuspendLayout();
-            this.panelFechaHora.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureLogo)).BeginInit();
+            this.panelFechaHora.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelLogo
@@ -48,6 +48,18 @@
             this.panelLogo.Name = "panelLogo";
             this.panelLogo.Size = new System.Drawing.Size(750, 340);
             this.panelLogo.TabIndex = 2;
+            // 
+            // pictureLogo
+            // 
+            this.pictureLogo.BackgroundImage = global::Proyecto.Properties.Resources.logoDefinitivo;
+            this.pictureLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureLogo.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pictureLogo.Location = new System.Drawing.Point(0, 41);
+            this.pictureLogo.Name = "pictureLogo";
+            this.pictureLogo.Size = new System.Drawing.Size(750, 299);
+            this.pictureLogo.TabIndex = 1;
+            this.pictureLogo.TabStop = false;
+            this.pictureLogo.Click += new System.EventHandler(this.pictureLogo_Click);
             // 
             // labelHora
             // 
@@ -88,20 +100,9 @@
             this.timerFechaHora.Enabled = true;
             this.timerFechaHora.Tick += new System.EventHandler(this.timerFechaHora_Tick);
             // 
-            // pictureLogo
-            // 
-            this.pictureLogo.BackgroundImage = global::Proyecto.Properties.Resources.logoDefinitivo;
-            this.pictureLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureLogo.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pictureLogo.Location = new System.Drawing.Point(0, 41);
-            this.pictureLogo.Name = "pictureLogo";
-            this.pictureLogo.Size = new System.Drawing.Size(750, 299);
-            this.pictureLogo.TabIndex = 1;
-            this.pictureLogo.TabStop = false;
-            // 
             // FormInicio
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(750, 460);
@@ -112,8 +113,8 @@
             this.Name = "FormInicio";
             this.Text = "Form2";
             this.panelLogo.ResumeLayout(false);
-            this.panelFechaHora.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureLogo)).EndInit();
+            this.panelFechaHora.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

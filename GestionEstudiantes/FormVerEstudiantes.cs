@@ -36,7 +36,7 @@ namespace Proyecto
         }
 
    
-    double[] notas = { 4, 3, 4, 0 };
+        double[] notas = { 4, 3, 4, 0 };
         double[] notas2 = { 7, 8, 9, 0 };
 
         public void verEstudiantes()

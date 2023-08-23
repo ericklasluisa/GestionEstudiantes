@@ -22,5 +22,10 @@ namespace Proyecto
             labelHora.Text = DateTime.Now.ToLongTimeString();
             labelFecha.Text = DateTime.Now.ToLongDateString();
         }
+
+        private void pictureLogo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -167,8 +167,7 @@ namespace IngresoEstudiantes
                 MessageBox.Show("Por favor, ingresa notas válidas (entre 0 y 20) con coma decimal.", "Notas Inválidas", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-
-            //validar que el codigo no se repita
+         
             GlobalList.lista.OrdenarCodeQuickSort(0, GlobalList.lista.Contar() - 1);
             GlobalList.lista.busquedaBinariaCode(0, GlobalList.lista.Contar() - 1, txtCodigo.Text);
             int encontrado = GlobalList.lista.busquedaBinariaPosicion(0, GlobalList.lista.Contar() - 1, txtCodigo.Text);
@@ -229,9 +228,7 @@ namespace IngresoEstudiantes
                     btnIngresar.Enabled = true;
                     txtCodigo.Enabled = true;
                 }
-
             }
-
         }
 
         private void dgvList_SelectionChanged(object sender, EventArgs e)
@@ -352,8 +349,6 @@ namespace IngresoEstudiantes
                 txtCodigo.Enabled = true;
                 LimpiarTxt();
             }
-
-        }
-      
+        }      
     }
 }

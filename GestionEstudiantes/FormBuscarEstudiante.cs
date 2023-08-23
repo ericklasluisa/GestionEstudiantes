@@ -52,8 +52,7 @@ namespace RegistroEstudiantes_GUI.NET
 
         public FormBuscarEstudiante()
         {
-            InitializeComponent();
-           // ingresarStudentsRandoms();
+            InitializeComponent();    
             txtNombre.Enabled = false;
             txtApellido.Enabled = false;
             txtNota1.Enabled = false;
@@ -68,20 +67,7 @@ namespace RegistroEstudiantes_GUI.NET
             txtNota2.Validating += txtNota_Validating;
             txtNota3.Validating += txtNota_Validating;
         }
-
-
-        //public void ingresarStudentsRandoms()
-        //{
-        //    //Datos de prueba
-        //    lista.Insertar("1006", "Leonardo", "Yaranga", notas);
-        //    lista.Insertar("1005", "Pardo", "Wax", notas2);
-        //    lista.Insertar("1000", "Leonardo", "Yaranga", notas);
-        //    lista.Insertar("1001", "Leo", "Yaranga", notas2);
-        //    lista.Insertar("1002", "Paco", "Web", notas);
-        //    lista.Insertar("1003", "Pipe", "Bueno", notas);
-        //    lista.Insertar("1004", "Waza", "Izzq", notas2);
-        //    //
-        //}
+ 
         public void LimpiarTxt()
         {
             txtCodigo.Text = "";
@@ -97,7 +83,6 @@ namespace RegistroEstudiantes_GUI.NET
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-
             string searchedCode = txtCodigo.Text;
             Console.WriteLine(searchedCode);
             GlobalList.lista.OrdenarCodeQuickSort(0, GlobalList.lista.Contar() - 1);

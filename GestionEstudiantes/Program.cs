@@ -16,7 +16,6 @@ namespace Proyecto
         protected string lastName;
         protected double[] notas;
 
-        //constructor
         public Student(string code = null, string name = null, string lastName = null, double[] notas = null)
         {
             this.code = code;
@@ -72,9 +71,6 @@ namespace Proyecto
             }
         }
 
-
-
-
     }
 
     public static class GlobalList
@@ -87,15 +83,13 @@ namespace Proyecto
     {
         public Student student;
         public Nodo sig;
-
-        //Constructor
+   
         public Nodo(Student student = null)
         {
             this.student = student;
             this.sig = null;
         }
-
-        //Verificar si la lista está vacía
+   
         public bool Vacio()
         {
             {
@@ -105,7 +99,6 @@ namespace Proyecto
             return false;
         }
 
-        //Insertar al inicio de la lista
         public void Insertar(string code, string nombre, string apellido, double[] notas)
         {
             Nodo nuevo;
@@ -180,6 +173,7 @@ namespace Proyecto
             }
             return null;
         }
+
         public void Ver()
         {
             if (!Vacio())
@@ -211,15 +205,11 @@ namespace Proyecto
                 int central = (ini + fin) / 2;
                 if (central < Contar() && central > -1)
                 {
-
-                    //Console.WriteLine(central);
+                  
                     if (nombre == EncontrarPosicion(central).student.Name)
                     {
-
-
                         return central;
                     }
-
 
                     if (nombre.CompareTo(EncontrarPosicion(central).student.Name) > 0)
                     {
@@ -238,32 +228,32 @@ namespace Proyecto
         }
 
         public int UbicarPivoteNombre(int ini, int fin)
-{
-    while (ini < fin)
-    {
-        while (EncontrarPosicion(fin).student.Name.CompareTo(EncontrarPosicion(ini).student.Name) >= 0 && ini < fin)
         {
-            fin--;
+            while (ini < fin)
+            {
+                while (EncontrarPosicion(fin).student.Name.CompareTo(EncontrarPosicion(ini).student.Name) >= 0 && ini < fin)
+                {
+                    fin--;
+                }
+                Intercambiar(ini, fin);
+                while (EncontrarPosicion(ini).student.Name.CompareTo(EncontrarPosicion(fin).student.Name) <= 0 && ini < fin)
+                {
+                    ini++;
+                }
+                Intercambiar(ini, fin);
+            }
+            return ini;
         }
-        Intercambiar(ini, fin);
-        while (EncontrarPosicion(ini).student.Name.CompareTo(EncontrarPosicion(fin).student.Name) <= 0 && ini < fin)
-        {
-            ini++;
-        }
-        Intercambiar(ini, fin);
-    }
-    return ini;
-}
 
-public void OrdenarNombreQuickSort(int ini, int fin)
-{
-    if (ini < fin)
-    {
-        int pivote = UbicarPivoteApellido(ini, fin);
-        OrdenarPorApellidoQuickSort(ini, pivote - 1);
-        OrdenarPorApellidoQuickSort(pivote + 1, fin);
-    }
-}
+        public void OrdenarNombreQuickSort(int ini, int fin)
+        {
+            if (ini < fin)
+            {
+                int pivote = UbicarPivoteApellido(ini, fin);
+                OrdenarPorApellidoQuickSort(ini, pivote - 1);
+                OrdenarPorApellidoQuickSort(pivote + 1, fin);
+            }
+        }
 
 
         public bool busquedaBinariaCode(int ini, int fin, string searchedCode)
@@ -311,8 +301,7 @@ public void OrdenarNombreQuickSort(int ini, int fin)
                 int central = (ini + fin) / 2;
                 if (central < Contar() && central > -1)
                 {
-
-                    //Console.WriteLine(central);
+                 
                     if (searchedCode == EncontrarPosicion(central).student.Code)
                     {
 
