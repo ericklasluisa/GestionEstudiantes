@@ -201,6 +201,7 @@
             this.panelVentanas.Name = "panelVentanas";
             this.panelVentanas.Size = new System.Drawing.Size(750, 460);
             this.panelVentanas.TabIndex = 2;
+            this.panelVentanas.Paint += new System.Windows.Forms.PaintEventHandler(this.panelVentanas_Paint);
             // 
             // panelBarraSuperior
             // 

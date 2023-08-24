@@ -26,13 +26,13 @@ namespace Proyecto
             listViewEstudiantes.View = View.Details;
             listViewEstudiantes.GridLines = true;
             listViewEstudiantes.FullRowSelect = true;
-            listViewEstudiantes.Columns.Add("Código", 100);
-            listViewEstudiantes.Columns.Add("Nombre", 150);
-            listViewEstudiantes.Columns.Add("Apellido", 150);
-            listViewEstudiantes.Columns.Add("Nota 1", 70);
-            listViewEstudiantes.Columns.Add("Nota 2", 70);
-            listViewEstudiantes.Columns.Add("Nota 3", 70);
-            listViewEstudiantes.Columns.Add("Promedio", 70);
+            listViewEstudiantes.Columns.Add("Código", 85);
+            listViewEstudiantes.Columns.Add("Nombre", 140);
+            listViewEstudiantes.Columns.Add("Apellido", 140);
+            listViewEstudiantes.Columns.Add("Nota 1", 85);
+            listViewEstudiantes.Columns.Add("Nota 2", 85);
+            listViewEstudiantes.Columns.Add("Nota 3", 85);
+            listViewEstudiantes.Columns.Add("Promedio", 105);
         }
 
    
@@ -146,6 +146,11 @@ namespace Proyecto
             FormBuscarEstudiante form2 = new FormBuscarEstudiante(); 
             form2.ShowDialog();    
             this.Enabled = false;
+        }
+
+        private void listViewEstudiantes_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

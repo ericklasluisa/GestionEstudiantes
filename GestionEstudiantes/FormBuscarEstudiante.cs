@@ -112,9 +112,9 @@ namespace RegistroEstudiantes_GUI.NET
                 btnCalcularPromedio.Enabled = true;
                
                 btnBuscar.Enabled = false;
-                MessageBox.Show("Estudiante con codigo" + txtCodigo.Text + " encontrado. " + "\nUsted puede actualizar los datos.");
+                MessageBox.Show("Estudiante con codigo " + txtCodigo.Text + " encontrado. " + "\nUsted puede actualizar las notas.");
             }
-            else { MessageBox.Show("No se encontro el estudiante " + txtCodigo.Text); }
+            else { MessageBox.Show("No se encontro el estudiante con codigo: " + txtCodigo.Text); }
 
         }
 
@@ -158,7 +158,7 @@ namespace RegistroEstudiantes_GUI.NET
                 GlobalList.lista.EncontrarPosicion(posicion).student.Code = txtCodigo.Text;
 
 
-                MessageBox.Show("Se actualizo correctamente el estudiante " + txtNombre.Text + " " + txtApellido.Text);
+                MessageBox.Show("Se actualizo correctamente las notas del estudiante " + txtNombre.Text + " " + txtApellido.Text);
                 
             }
         }

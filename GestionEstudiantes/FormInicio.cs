@@ -15,6 +15,7 @@ namespace Proyecto
         public FormInicio()
         {
             InitializeComponent();
+
         }
 
         private void timerFechaHora_Tick(object sender, EventArgs e)

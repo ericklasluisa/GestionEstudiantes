@@ -38,7 +38,7 @@ namespace IngresoEstudiantes
 
             if (string.IsNullOrWhiteSpace(textBox.Text))
             {
-                MessageBox.Show("Por favor, ingrese un nombre.", "Campo vacio", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //MessageBox.Show("Por favor, ingrese un nombre.", "Campo vacio", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
             else if (textBox.Text.Length > 35)
@@ -94,8 +94,8 @@ namespace IngresoEstudiantes
             if (!EsNumeroDecimalValido(textBox.Text))
             {
                 MessageBox.Show("Por favor, ingresa notas válidas (entre 0 y 20) con dos decimales separados por coma decimal.", "Nota Inválida", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                textBox.SelectAll();
-                e.Cancel = true; // Evita que el TextBox pierda el foco
+                //textBox.SelectAll();
+                //e.Cancel = true; // Evita que el TextBox pierda el foco
             }
         }
 
@@ -118,12 +118,15 @@ namespace IngresoEstudiantes
             txtNota1.Text = "";
             txtNota2.Text = "";
             txtNota3.Text = "";
+            txtCodigo.Enabled = true;
+            
         }
 
 
 
         public FormIngresoEstudiante()
         {
+
             InitializeComponent();
             dgvLista.RowHeaderMouseClick += dgvLista_RowHeaderMouseClick;
             dgvLista.SelectionChanged += dgvList_SelectionChanged;
@@ -135,6 +138,10 @@ namespace IngresoEstudiantes
             txtNombre.KeyPress += txtNombre_KeyPress;
             txtApellido.KeyPress += txtApellido_KeyPress;
             MostrarLista();
+            
+            
+
+
 
         }
 
@@ -179,19 +186,18 @@ namespace IngresoEstudiantes
             }
             else
             {
-
-                bool encontrado2 = false;
-
                 GlobalList.lista.OrdenarNombreQuickSort(0, GlobalList.lista.Contar() - 1);
                 int posicion = GlobalList.lista.busquedaBinariaPosicionNombre(0, GlobalList.lista.Contar() - 1, txtNombre.Text);
+                Console.WriteLine(posicion);
+                //bool encontrado2 = false;
+
+                //GlobalList.lista.OrdenarNombreQuickSort(0, GlobalList.lista.Contar() - 1);
+                //int posicion = GlobalList.lista.busquedaBinariaPosicionNombre(0, GlobalList.lista.Contar() - 1, txtNombre.Text);
+                //Console.WriteLine(txtNombre.Text);
+                //Console.WriteLine(posicion);
                 if (posicion != -1 && GlobalList.lista.EncontrarPosicion(posicion).student.LastName == txtApellido.Text)
                 {
-                    encontrado2 = true;
-                }
-
-
-                if (encontrado2 == true)
-                {
+                    //encontrado2 = true;
                     string codigoEstudiante = GlobalList.lista.EncontrarPosicion(posicion).student.Code;
 
                     DialogResult result = MessageBox.Show("El estudiante " + txtNombre.Text + " " + txtApellido.Text + " ya se encuentra en la lista con el código " + codigoEstudiante + ". ¿Desea agregarlo de todas formas?",
@@ -217,8 +223,11 @@ namespace IngresoEstudiantes
 
                     }
                 }
-                else
+
+
+                if (posicion == -1)
                 {
+                   
                     GlobalList.lista.Insertar(txtCodigo.Text, txtNombre.Text, txtApellido.Text, notas);
                     MostrarLista();
                     MessageBox.Show("Se agrego correctamente el estudiante " + txtNombre.Text + " " + txtApellido.Text);
@@ -227,8 +236,10 @@ namespace IngresoEstudiantes
                     btnActualizar.Enabled = false;
                     btnIngresar.Enabled = true;
                     txtCodigo.Enabled = true;
+                    txtCodigo.Focus();
                 }
             }
+            txtCodigo.Focus();
         }
 
         private void dgvList_SelectionChanged(object sender, EventArgs e)

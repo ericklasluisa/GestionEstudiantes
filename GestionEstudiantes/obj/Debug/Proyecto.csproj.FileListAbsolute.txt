@@ -56,3 +56,18 @@ D:\Leonardo Yaranga\Escritorio\Estructura de datos\Gestion Estudiantes\GestionEs
 D:\Leonardo Yaranga\Escritorio\Estructura de datos\Gestion Estudiantes\GestionEstudiantes\GestionEstudiantes\obj\Debug\Proyecto.csproj.CoreCompileInputs.cache
 D:\Leonardo Yaranga\Escritorio\Estructura de datos\Gestion Estudiantes\GestionEstudiantes\GestionEstudiantes\obj\Debug\Proyecto.exe
 D:\Leonardo Yaranga\Escritorio\Estructura de datos\Gestion Estudiantes\GestionEstudiantes\GestionEstudiantes\obj\Debug\Proyecto.pdb
+C:\Users\paqui\Desktop\ESPE\TERCER SEMESTRE\ESTRUCTURA DE DATOS\TERCER PARCIAL\Proyecto Agenda Estudiantes\GestionEstudiantes\GestionEstudiantes\bin\Debug\Proyecto.exe.config
+C:\Users\paqui\Desktop\ESPE\TERCER SEMESTRE\ESTRUCTURA DE DATOS\TERCER PARCIAL\Proyecto Agenda Estudiantes\GestionEstudiantes\GestionEstudiantes\bin\Debug\Proyecto.exe
+C:\Users\paqui\Desktop\ESPE\TERCER SEMESTRE\ESTRUCTURA DE DATOS\TERCER PARCIAL\Proyecto Agenda Estudiantes\GestionEstudiantes\GestionEstudiantes\bin\Debug\Proyecto.pdb
+C:\Users\paqui\Desktop\ESPE\TERCER SEMESTRE\ESTRUCTURA DE DATOS\TERCER PARCIAL\Proyecto Agenda Estudiantes\GestionEstudiantes\GestionEstudiantes\obj\Debug\Proyecto.csproj.AssemblyReference.cache
+C:\Users\paqui\Desktop\ESPE\TERCER SEMESTRE\ESTRUCTURA DE DATOS\TERCER PARCIAL\Proyecto Agenda Estudiantes\GestionEstudiantes\GestionEstudiantes\obj\Debug\Proyecto.csproj.SuggestedBindingRedirects.cache
+C:\Users\paqui\Desktop\ESPE\TERCER SEMESTRE\ESTRUCTURA DE DATOS\TERCER PARCIAL\Proyecto Agenda Estudiantes\GestionEstudiantes\GestionEstudiantes\obj\Debug\RegistroEstudiantes_GUI.NET.FormBuscarEstudiante.resources
+C:\Users\paqui\Desktop\ESPE\TERCER SEMESTRE\ESTRUCTURA DE DATOS\TERCER PARCIAL\Proyecto Agenda Estudiantes\GestionEstudiantes\GestionEstudiantes\obj\Debug\IngresoEstudiantes.FormIngresoEstudiante.resources
+C:\Users\paqui\Desktop\ESPE\TERCER SEMESTRE\ESTRUCTURA DE DATOS\TERCER PARCIAL\Proyecto Agenda Estudiantes\GestionEstudiantes\GestionEstudiantes\obj\Debug\Proyecto.FormPrincipal.resources
+C:\Users\paqui\Desktop\ESPE\TERCER SEMESTRE\ESTRUCTURA DE DATOS\TERCER PARCIAL\Proyecto Agenda Estudiantes\GestionEstudiantes\GestionEstudiantes\obj\Debug\Proyecto.FormInicio.resources
+C:\Users\paqui\Desktop\ESPE\TERCER SEMESTRE\ESTRUCTURA DE DATOS\TERCER PARCIAL\Proyecto Agenda Estudiantes\GestionEstudiantes\GestionEstudiantes\obj\Debug\Proyecto.FormVerEstudiantes.resources
+C:\Users\paqui\Desktop\ESPE\TERCER SEMESTRE\ESTRUCTURA DE DATOS\TERCER PARCIAL\Proyecto Agenda Estudiantes\GestionEstudiantes\GestionEstudiantes\obj\Debug\Proyecto.Properties.Resources.resources
+C:\Users\paqui\Desktop\ESPE\TERCER SEMESTRE\ESTRUCTURA DE DATOS\TERCER PARCIAL\Proyecto Agenda Estudiantes\GestionEstudiantes\GestionEstudiantes\obj\Debug\Proyecto.csproj.GenerateResource.cache
+C:\Users\paqui\Desktop\ESPE\TERCER SEMESTRE\ESTRUCTURA DE DATOS\TERCER PARCIAL\Proyecto Agenda Estudiantes\GestionEstudiantes\GestionEstudiantes\obj\Debug\Proyecto.csproj.CoreCompileInputs.cache
+C:\Users\paqui\Desktop\ESPE\TERCER SEMESTRE\ESTRUCTURA DE DATOS\TERCER PARCIAL\Proyecto Agenda Estudiantes\GestionEstudiantes\GestionEstudiantes\obj\Debug\Proyecto.exe
+C:\Users\paqui\Desktop\ESPE\TERCER SEMESTRE\ESTRUCTURA DE DATOS\TERCER PARCIAL\Proyecto Agenda Estudiantes\GestionEstudiantes\GestionEstudiantes\obj\Debug\Proyecto.pdb

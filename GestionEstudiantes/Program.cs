@@ -197,6 +197,7 @@ namespace Proyecto
         }
 
 
+        
         public int busquedaBinariaPosicionNombre(int ini, int fin, string nombre)
         {
             int posicion = -1;
@@ -205,7 +206,6 @@ namespace Proyecto
                 int central = (ini + fin) / 2;
                 if (central < Contar() && central > -1)
                 {
-                  
                     if (nombre == EncontrarPosicion(central).student.Name)
                     {
                         return central;
@@ -213,19 +213,21 @@ namespace Proyecto
 
                     if (nombre.CompareTo(EncontrarPosicion(central).student.Name) > 0)
                     {
-                        posicion = busquedaBinariaPosicion(central + 1, fin, nombre);
+                        posicion = busquedaBinariaPosicionNombre(central + 1, fin, nombre);
                     }
                     else
                     {
-                        posicion = busquedaBinariaPosicion(ini, central - 1, nombre);
+                        posicion = busquedaBinariaPosicionNombre(ini, central - 1, nombre);
                     }
                 }
             }
-            else { Console.WriteLine("\n Elemento no encontrado"); return -1; }
 
             return posicion;
-
         }
+
+
+
+
 
         public int UbicarPivoteNombre(int ini, int fin)
         {
@@ -249,9 +251,9 @@ namespace Proyecto
         {
             if (ini < fin)
             {
-                int pivote = UbicarPivoteApellido(ini, fin);
-                OrdenarPorApellidoQuickSort(ini, pivote - 1);
-                OrdenarPorApellidoQuickSort(pivote + 1, fin);
+                int pivote = UbicarPivoteNombre(ini, fin);
+                OrdenarNombreQuickSort(ini, pivote - 1);
+                OrdenarNombreQuickSort(pivote + 1, fin);
             }
         }
 
@@ -416,16 +418,64 @@ namespace Proyecto
                 OrdenarPromedioQuickSort(pivote + 1, fin);
             }
         }
+
+
     }
 
     internal static class Program
     {
+        static Random random = new Random();
+
+        static string GenerarCodigo()
+        {
+            return random.Next(1000, 9999).ToString();
+        }
+
+        static string GenerarNombre()
+        {
+            string[] nombres = { "Juan", "Maria", "Luis", "Ana", "Pedro", "Laura", "Carlos", "Sofia", "David", "Elena" };
+            return nombres[random.Next(nombres.Length)];
+        }
+
+        static string GenerarApellido()
+        {
+            string[] apellidos = { "González", "Lopez", "Martinez", "Rodriguez", "Perez", "Sanchez", "Fernandez", "Ramirez", "Torres", "Díaz" };
+            return apellidos[random.Next(apellidos.Length)];
+        }
+
+        static double[] GenerarNotas()
+        {
+            double[] notas = new double[4];
+            for (int i = 0; i < 3; i++)
+            {
+                notas[i] = Math.Round(random.NextDouble() * 19 + 1, 2); // Notas aleatorias entre 1.00 y 20.00
+            }
+            notas[3] = 0.0; // Cuarto espacio con valor fijo 0.0
+            return notas;
+        }
+
+
         /// <summary>
         /// Punto de entrada principal para la aplicación.
         /// </summary>
         [STAThread]
+
+
+
+
         static void Main()
         {
+
+            for (int i = 0; i < 20; i++)
+            {
+                string codigo = GenerarCodigo();
+                string nombre = GenerarNombre();
+                string apellido = GenerarApellido();
+                double[] notas = GenerarNotas();
+
+                GlobalList.lista.Insertar(codigo, nombre, apellido, notas);
+            }
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FormPrincipal());

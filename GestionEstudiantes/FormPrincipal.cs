@@ -94,5 +94,10 @@ namespace Proyecto
         {
             AbrirFormulario(new FormInicio());
         }
+
+        private void panelVentanas_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

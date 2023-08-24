@@ -69,13 +69,14 @@
             // 
             this.listViewEstudiantes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(79)))), ((int)(((byte)(99)))));
             this.listViewEstudiantes.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listViewEstudiantes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.listViewEstudiantes.ForeColor = System.Drawing.Color.White;
             this.listViewEstudiantes.HideSelection = false;
-            this.listViewEstudiantes.Location = new System.Drawing.Point(30, 92);
+            this.listViewEstudiantes.Location = new System.Drawing.Point(12, 92);
             this.listViewEstudiantes.Name = "listViewEstudiantes";
-            this.listViewEstudiantes.Size = new System.Drawing.Size(689, 272);
+            this.listViewEstudiantes.Size = new System.Drawing.Size(726, 272);
             this.listViewEstudiantes.TabIndex = 4;
             this.listViewEstudiantes.UseCompatibleStateImageBehavior = false;
+            this.listViewEstudiantes.SelectedIndexChanged += new System.EventHandler(this.listViewEstudiantes_SelectedIndexChanged);
             this.listViewEstudiantes.Click += new System.EventHandler(this.listViewEstudiantes_Click);
             // 
             // btnOrdenarPorApellido
